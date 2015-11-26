@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ChEgBuProject.com</string>
+
+    <string name="button_SinglePlayer">Single Player</string>
+    <string name="button_DualPlayer">Dual Player</string>
+    <string name="button_Help">Help</string>
+    <string name="button_Exit">Exit</string>
+
 </resources>
