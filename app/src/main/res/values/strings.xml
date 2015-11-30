@@ -5,5 +5,15 @@
     <string name="button_DualPlayer">Dual Player</string>
     <string name="button_Help">Help</string>
     <string name="button_Exit">Exit</string>
+    <string name="button_0_0_description">button_0_0</string>
+    <string name="button_0_1_description">button_0_1</string>
+    <string name="button_0_2_description">button_0_2</string>
+    <string name="button_1_0_description">button_1_0</string>
+    <string name="button_1_1_description">button_1_1</string>
+    <string name="button_1_2_description">button_1_2</string>
+    <string name="button_2_0_description">button_2_0</string>
+    <string name="button_2_1_description">button_2_1</string>
+    <string name="button_2_2_description">button_2_2</string>
+
 
 </resources>

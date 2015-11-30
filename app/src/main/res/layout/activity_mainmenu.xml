@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:baselineAligned="false">
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
         android:text="@string/button_SinglePlayer"
-        android:id="@+id/button"
+        android:id="@+id/button_SinglePlayer"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:layout_weight="0" />
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
         android:text="@string/button_DualPlayer"
-        android:id="@+id/button2"
+        android:id="@+id/button_DualPlayer"
         android:layout_gravity="center_horizontal" />
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
         android:text="@string/button_Help"
-        android:id="@+id/button3"
+        android:id="@+id/button_Help"
         android:layout_gravity="center_horizontal" />
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
         android:text="@string/button_Exit"
-        android:id="@+id/button4"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/button_Exit"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp" />
 </LinearLayout>

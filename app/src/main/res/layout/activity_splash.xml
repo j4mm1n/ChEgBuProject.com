@@ -21,7 +21,6 @@
         android:text="Welcome to ChEgBu"
         android:id="@+id/textView"
         android:textSize="35sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_marginTop="350dp" />
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
