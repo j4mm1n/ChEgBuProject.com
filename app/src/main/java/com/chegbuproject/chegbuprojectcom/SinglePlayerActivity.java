@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,6 +15,7 @@ import java.util.Random;
 public class SinglePlayerActivity extends Activity {
 
     private ArrayList<ImageButton> buttonArrayList = new ArrayList<ImageButton>();
+    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +43,16 @@ public class SinglePlayerActivity extends Activity {
                     String tempString = imageButton.getContentDescription().toString();
                     String subString = tempString.substring(6);
 
-                    if (checkButton(Integer.parseInt(subString))){
+                    if (checkButton(Integer.parseInt(subString))) {
                         imageButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.cross));
-
+                        counter++;
                         buttonArrayList.set(Integer.parseInt(subString), null);
-                        computerTurn();
+                        if (checkCounter()) {
+                            computerTurn();
+                        } else {
+                            Toast.makeText(SinglePlayerActivity.this, "The game has ended.", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 }
             });
@@ -69,6 +77,7 @@ public class SinglePlayerActivity extends Activity {
         if (checkButton(tempNr)) {
             buttonArrayList.get(tempNr).setBackgroundDrawable(getResources().getDrawable(R.drawable.circle));
             buttonArrayList.set(tempNr, null);
+            counter++;
         } else {
             computerTurn();
         }
@@ -80,5 +89,12 @@ public class SinglePlayerActivity extends Activity {
         } else {
             return true;
         }
+    }
+    
+    private boolean checkCounter(){
+        if(counter==9){
+            return false;
+        }
+        return true;
     }
 }
