@@ -28,13 +28,13 @@ public class MainMenu extends Activity {
         Button button_Exit = (Button) findViewById(R.id.button_Exit);
 
 
-        button_SinglePlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, SinglePlayerActivity.class);
-                startActivity(intent);
-            }
-        });
+            button_SinglePlayer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, SinglePlayerActivity.class);
+                    startActivity(intent);
+                }
+            });
 
         button_DualPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
