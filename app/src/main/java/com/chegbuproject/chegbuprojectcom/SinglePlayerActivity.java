@@ -37,16 +37,15 @@ public class SinglePlayerActivity extends Activity {
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imageButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.cross));
                     String tempString = imageButton.getContentDescription().toString();
-                    String subString = tempString.substring(10);
-                    System.out.println(tempString);
+                    String subString = tempString.substring(6);
 
-                    int Numb = Integer.parseInt(subString);
-                    System.out.println("Number: " + Numb);
-                    buttonArrayList.set(Numb, null);
-                    computerTurn();
+                    if (checkButton(Integer.parseInt(subString))){
+                        imageButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.cross));
 
+                        buttonArrayList.set(Integer.parseInt(subString), null);
+                        computerTurn();
+                    }
                 }
             });
         }
