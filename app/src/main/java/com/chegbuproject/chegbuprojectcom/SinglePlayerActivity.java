@@ -13,32 +13,39 @@ import java.util.Random;
 public class SinglePlayerActivity extends Activity {
 
     private ArrayList<ImageButton> buttonArrayList = new ArrayList<ImageButton>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleplayer);
 
-        ImageButton button_0 = (ImageButton) findViewById(R.id.imageButton_0_0);
-        ImageButton button_1 = (ImageButton) findViewById(R.id.imageButton_0_1);
-        ImageButton button_2 = (ImageButton) findViewById(R.id.imageButton_0_2);
-        ImageButton button_3 = (ImageButton) findViewById(R.id.imageButton_1_0);
-        ImageButton button_4 = (ImageButton) findViewById(R.id.imageButton_1_1);
-        ImageButton button_5 = (ImageButton) findViewById(R.id.imageButton_1_2);
-        ImageButton button_6 = (ImageButton) findViewById(R.id.imageButton_2_0);
-        ImageButton button_7 = (ImageButton) findViewById(R.id.imageButton_2_1);
-        ImageButton button_8 = (ImageButton) findViewById(R.id.imageButton_2_2);
+        ImageButton button_0 = (ImageButton) findViewById(R.id.imageButton0);
+        ImageButton button_1 = (ImageButton) findViewById(R.id.imageButton1);
+        ImageButton button_2 = (ImageButton) findViewById(R.id.imageButton2);
+        ImageButton button_3 = (ImageButton) findViewById(R.id.imageButton3);
+        ImageButton button_4 = (ImageButton) findViewById(R.id.imageButton4);
+        ImageButton button_5 = (ImageButton) findViewById(R.id.imageButton5);
+        ImageButton button_6 = (ImageButton) findViewById(R.id.imageButton6);
+        ImageButton button_7 = (ImageButton) findViewById(R.id.imageButton7);
+        ImageButton button_8 = (ImageButton) findViewById(R.id.imageButton8);
 
         ImageButton buttonList[] = {button_0, button_1, button_2, button_3, button_4, button_5
                 , button_6, button_7, button_8};
 
         //Loop to make OnClickListener for all of the buttons.
-        for (final ImageButton imageButton: buttonList){
+        for (final ImageButton imageButton : buttonList) {
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     imageButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.cross));
-                    buttonArrayList.remove(this);
-                    ComputerTurn();
+                    String tempString = imageButton.getContentDescription().toString();
+                    String subString = tempString.substring(10);
+                    System.out.println(tempString);
+
+                    int Numb = Integer.parseInt(subString);
+                    System.out.println("Number: " + Numb);
+                    buttonArrayList.set(Numb, null);
+                    computerTurn();
 
                 }
             });
@@ -56,22 +63,22 @@ public class SinglePlayerActivity extends Activity {
         buttonArrayList.add(button_8);
     }
 
-    protected void ComputerTurn() {
+    protected void computerTurn() {
         Random random = new Random();
         int tempNr = random.nextInt(8);
-        do {
+
+        if (checkButton(tempNr)) {
             buttonArrayList.get(tempNr).setBackgroundDrawable(getResources().getDrawable(R.drawable.circle));
-            buttonArrayList.remove(tempNr);
-            break;
-        }while (checkButton(tempNr));
+            buttonArrayList.set(tempNr, null);
+        } else {
+            computerTurn();
+        }
     }
 
     private boolean checkButton(int tempNr) {
-        if(!buttonArrayList.get(tempNr).getBackground().equals(R.drawable.cross) ||
-                !buttonArrayList.get(tempNr).getBackground().equals(R.drawable.circle)){
+        if (buttonArrayList.get(tempNr) == null) {
             return false;
-        }
-        else{
+        } else {
             return true;
         }
     }

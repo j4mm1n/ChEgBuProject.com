@@ -9,7 +9,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_0_0"
+        android:id="@+id/imageButton0"
         android:layout_row="0"
         android:layout_column="1"
         android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
@@ -18,7 +18,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_0_1"
+        android:id="@+id/imageButton1"
         android:layout_row="0"
         android:layout_column="2"
         android:contentDescription="@string/button_0_1_description"
@@ -27,7 +27,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_0_2"
+        android:id="@+id/imageButton2"
         android:layout_row="0"
         android:layout_column="3"
         android:contentDescription="@string/button_0_2_description"
@@ -36,7 +36,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_1_0"
+        android:id="@+id/imageButton3"
         android:layout_row="1"
         android:layout_column="1"
         android:contentDescription="@string/button_1_0_description"
@@ -45,7 +45,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_1_1"
+        android:id="@+id/imageButton4"
         android:layout_row="1"
         android:layout_column="2"
         android:contentDescription="@string/button_1_1_description"
@@ -54,7 +54,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_1_2"
+        android:id="@+id/imageButton5"
         android:layout_row="1"
         android:layout_column="3"
         android:contentDescription="@string/button_1_2_description"
@@ -63,7 +63,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_2_0"
+        android:id="@+id/imageButton6"
         android:layout_row="2"
         android:layout_column="1"
         android:contentDescription="@string/button_2_0_description"
@@ -72,7 +72,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_2_1"
+        android:id="@+id/imageButton7"
         android:layout_row="2"
         android:layout_column="2"
         android:contentDescription="@string/button_2_1_description"
@@ -81,7 +81,7 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="190dp"
-        android:id="@+id/imageButton_2_2"
+        android:id="@+id/imageButton8"
         android:layout_row="2"
         android:layout_column="3"
         android:contentDescription="@string/button_2_2_description"
